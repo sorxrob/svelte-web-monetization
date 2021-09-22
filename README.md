@@ -2,22 +2,10 @@
 
 > A minimal and lightweight wrapper for the Web Monetization API.
 
-![GitHub](https://img.shields.io/github/license/sorxrob/svelte-monetization)
-![GitHub repo version](https://img.shields.io/npm/v/svelte-monetization)
-![GitHub last commit](https://img.shields.io/github/last-commit/sorxrob/svelte-monetization)
-
-## Sample Project
-
-```bash
-$ cd example
-$ npm install
-$ npm run dev
-```
-
 ## Installation
 
 ```bash
-$ npm install --save svelte-monetization
+$ npm install svelte-monetization
 ```
 
 ## Usage
@@ -26,7 +14,7 @@ $ npm install --save svelte-monetization
 
 ```svelte
 <script>
-  import SvelteMonetization from "svelte-monetization";
+  import Monetization from "svelte-monetization";
 
   function handleProgress(event) {
     console.log(event.detail);
@@ -40,7 +28,7 @@ $ npm install --save svelte-monetization
     content="$coil.xrptipbot.com/701298d5-481d-40ff-9945-336671ab2c42" />
 </svelte:head>
 
-<SvelteMonetization
+<Monetization
   let:isMonetized
   let:isLoading
   on:progress={handleProgress}>
@@ -51,7 +39,7 @@ $ npm install --save svelte-monetization
   {:else}
     <div>Show ads here</div>
   {/if}
-</SvelteMonetization>
+</Monetization>
 ```
 
 ### Events
@@ -79,11 +67,6 @@ You can also listen to [Web Monetization browser events](https://webmonetization
 - Hide existing ads when Web Monetization is enabled
 - Content that can be viewed only when Web Monetization is enabled
 - Total amount of payment stored for each user in database etc, utilized for premium content
-
-## To-Do
-
-- [ ] Tests
-- [x] Example app
 
 ## License
 
